@@ -1,0 +1,25 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment / secrets
+.env
+*.env
+
+# AWS / credentials (extra safety)
+.aws/
+**/credentials
+**/config
+
+# Reports / artifacts
+zap-reports/
+*.html
+
+# VS Code / OS junk
+.vscode/
+.DS_Store
+Thumbs.db
