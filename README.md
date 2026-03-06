@@ -14,8 +14,9 @@ This project demonstrates a cloud-integrated DevSecOps security automation pipel
 The pipeline simulates a real-world DevSecOps workflow where security testing is automated and security artifacts are centrally stored in cloud infrastructure.
 
 ---
-
 ## Architecture
+
+![DevSecOps Pipeline](docs/devsecops-security-pipeline-architecture.png)
 
 1. Flask application runs locally
 2. OWASP ZAP runs via Docker
