@@ -27,15 +27,33 @@ The pipeline simulates a real-world DevSecOps workflow where security testing is
 
 ---
 
-## Technologies Used
+## Technology Stack
 
-- Python 3.13
-- OWASP ZAP Docker
-- Flask
-- AWS CLI
-- boto3
-- Git / GitHub
-- VS Code
+- Python 3.13 (Security automation orchestration)
+- OWASP ZAP (Dynamic Application Security Testing - DAST)
+- Docker (Containerized security scanning)
+- Flask (Sample web application target)
+- AWS S3 (Security report artifact storage)
+- AWS CLI (Cloud authentication and configuration)
+- boto3 (Python AWS SDK for automated uploads)
+- Git / GitHub (Version control and repository management)
+- VS Code (Development environment)
+
+---
+
+## Project Structure
+
+app/
+Flask test application
+
+automation/
+Python security automation scripts
+
+docs/
+Architecture diagrams
+
+requirements.txt
+Python dependencies
 
 ---
 
@@ -46,6 +64,17 @@ The pipeline simulates a real-world DevSecOps workflow where security testing is
 3. Execute automation script
 4. Generate ZAP security report
 5. Automatically upload report to AWS S3 bucket
+
+---
+
+## Security Workflow
+
+1. Developer pushes code to GitHub
+2. Python automation script triggers security scan
+3. OWASP ZAP performs dynamic security testing
+4. HTML report is generated
+5. Security artifact uploaded to AWS S3
+6. Reports stored with timestamp for auditing and review
 
 ---
 
@@ -86,8 +115,10 @@ This project demonstrates:
 
 ## Future Enhancements
 
-- GitHub Actions CI integration
-- Automated scan on push
-- S3 lifecycle policies
-- AWS CloudWatch logging
-- Terraform-based infrastructure provisioning
+Planned improvements to expand the DevSecOps security pipeline:
+
+- Integrate GitHub Actions CI/CD to automatically run security scans on code commits
+- Trigger OWASP ZAP scans automatically on repository push events
+- Implement Amazon S3 lifecycle policies for automated report retention and archival
+- Add AWS CloudWatch logging for pipeline monitoring and security event visibility
+- Provision infrastructure using Terraform for repeatable Infrastructure-as-Code deployments
